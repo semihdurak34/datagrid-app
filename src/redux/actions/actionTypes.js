@@ -1,0 +1,15 @@
+const actionTypes = {
+  dataActions: {
+    GET_DATAS_START: "GET_DATAS_START",
+    GET_DATAS_SUCCESS: "GET_DATAS_SUCCESS",
+    GET_DATAS_FAIL: "GET_DATAS_FAIL",
+    ADD_DATAS: "ADD_DATAS",
+  },
+  categoryActions: {
+    GET_CATEGORIES_START: "GET_CATEGORIES_START",
+    GET_CATEGORIES_SUCCESS: "GET_CATEGORIES_SUCCESS",
+    GET_CATEGORIES_FAIL: "GET_CATEGORIES_FAIL",
+  },
+};
+
+export default actionTypes;

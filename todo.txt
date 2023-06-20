@@ -1,0 +1,21 @@
+Dependencies ;
+ -Json server
+ -axios,
+ -redux(state manegement)(react, react-redux)
+ -react-router-dom  
+ kuruldu.
+
+İş sırası;
+ - Veri yapısı ve ilişkiler kurulur (Json-server in yapılandırılması)
+ - Gloabal bir axios dosyası oluşturma 
+ - Redux yapısını oluşturma
+    -Stora a taşınacak state ler hangileri olmalı? (data ve categories state ler olmalı)
+- Router yapısını kur. 
+-UI kütüphanesi olarak bootstrap ve pure css kullandım.
+
+Veri çekme işini app.js de yapmamız gerek. (componentDidMount ile (useEffect kullandım))
+Çünkü app.js projemizin başlangıcında çalışan ilk yer ve ilk açılışta verilerimizin yüklenmesini isteriz.
+
+-React Router yapısnı kullanarak sayfa yönlendirme işlemlerini yaptım.
+-Kullanıcının yanlış sayfaya yönlenmesi durumunda ekranda gözükecek bir 404 hata sayfası ekledim.
+-Yeni kayıt esnasında inputlar boş bırakılırsa bir alert durumu kodladım.

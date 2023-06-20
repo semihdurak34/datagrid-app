@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.pagination-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:start;
+    
+}
+.select{
+    
+    width: 95px;
+    height: 30px;
+    border-radius: 20px;
+}
+.list {
+    position: relative;
+    margin-top: 80px;
+}
+.addbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #744BFC;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+    height: 30px;
+    
+   
+   
+   
+
+}
+.addbutton:hover{
+    opacity: 0.8;
+}
+
+.add-window {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    height: auto;
+    box-sizing: border-box;
+    margin:auto;
+    padding-top: 60px;
+    padding-top: 10px;
+
+    
+    
+    
+}
+.input{
+    
+    width: 50%;
+    margin: auto;
+;
+    
+}
+.real-window{
+    text-align: center;
+    flex-direction: column;
+    width: 30%;
+    height: 400px;
+    margin: auto;
+    position: relative;
+    border-radius: 13px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    
+
+    
+
+}
+.buttons{
+    display: flex;
+    justify-content: end;
+    gap: 30px;
+    margin-top: 60px;
+}
+.saveButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 100px;
+    border-radius: 20px;
+    background-color: #744BFC;
+    color: white;
+    font-size: medium;
+    font-weight: 500;
+   
+}
+.saveButton:hover{
+   opacity: 0.8;
+}
+.cancelButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 100px;
+    border-radius: 20px;
+    color:#744BFC;
+    font-size: medium;
+    font-weight: 500;
+}
+.cancelButton:hover{
+    opacity: 0.8;
+}
+
+.top-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.plus-sign{
+    display: flex;
+    width: 0;
+    height: 12px;
+    display:contents;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1px;
+    font-weight: 500;
+    font-size:20px;
+    
+    
+    
+    
+    
+}
+.searchInput{
+    width: 250px;
+   
+    border-radius: 30px;
+}
