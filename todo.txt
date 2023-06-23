@@ -22,3 +22,5 @@ Veri çekme işini app.js de yapmamız gerek. (componentDidMount ile (useEffect 
 -Seacrh inputu oluşturuldu.
 -Tabloda pagination, limit ve sort (sıralama) işlmeleri yapıldı. ilk iki işlem için componentlara ayrıldı. sort işlemi ListDatas 
 componentinin içinde yapıldı.
+-Yeni Hesap Ekle butonuna basılınca ekrana gelen pencerede sosyal medya adı apiden gelen sosyal medya adlarını otomatik çağırarak 
+kayıt işlemini kolaylaştırıyor ve hata oranını azaltıyor.

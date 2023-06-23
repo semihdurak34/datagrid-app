@@ -5,7 +5,15 @@ import { FaArrowUp, FaArrowDown } from "react-icons/fa";
 
 const ListDatas = (props) => {
   const { categoriesState } = useSelector((state) => state);
-
+  const empty = 15 - props.datas.length;
+  const renderEmpty = () => {
+    let i = 0;
+    let array = [];
+    while (i < empty) {
+      i++;
+      array.push("td");
+    }
+  };
   const renderArrow = () => {
     if (props.sorted.reversed) {
       return <FaArrowUp />;
@@ -13,6 +21,7 @@ const ListDatas = (props) => {
     return <FaArrowDown />;
   };
 
+  console.log(empty);
   return (
     <>
       <div className=" table-responsive-xl">
@@ -48,6 +57,15 @@ const ListDatas = (props) => {
                   </tr>
                 );
               })}
+              {Array(empty)
+                .fill(0)
+                .map((_, i) => (
+                  <tr className="empty-row">
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                ))}
             </tbody>
           </table>
         </div>

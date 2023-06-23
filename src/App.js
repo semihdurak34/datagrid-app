@@ -55,7 +55,6 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/add-data" element={<AddData />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>

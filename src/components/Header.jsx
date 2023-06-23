@@ -37,8 +37,8 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <div>
-        <div className="nav-link">
+      <div className="nav-social">
+        <div>
           <Link style={{ color: "#744BFC" }}>
             <BsYoutube style={{ marginLeft: "85px", scale: "1.4" }} />
           </Link>

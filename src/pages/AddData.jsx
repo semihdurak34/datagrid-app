@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import actionTypes from "../redux/actions/actionTypes";
 import { useNavigate } from "react-router-dom";
 
-const AddData = () => {
+const AddData = ({ setIsActiveModal, isActiveModal }) => {
   const { categoriesState } = useSelector((state) => state);
   const [form, setForm] = useState({
     id: new Date().getTime(),
@@ -17,10 +17,6 @@ const AddData = () => {
   });
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
-  const cancelHandle = () => {
-    navigate("/");
-  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -41,21 +37,22 @@ const AddData = () => {
           type: actionTypes.dataActions.ADD_DATAS,
           payload: newData,
         });
-        navigate("/");
+        setIsActiveModal(false);
       })
       .catch((err) => {});
   };
 
   /* api ye request yollama ve stora a dispatch olma */
-
+  console.log(isActiveModal);
   return (
-    <div className="container-lm">
-      <Header />
+    <div className="add-data">
       <div className="real-window">
         <div>
           <div className="d-flex justify-content-end ">
             <button
-              onClick={() => cancelHandle()}
+              onClick={() => {
+                setIsActiveModal(false);
+              }}
               type="button"
               className="btn-close  "
               aria-label="Close"
@@ -120,13 +117,19 @@ const AddData = () => {
             </div>
             <div className="buttons">
               <button
-                onClick={() => cancelHandle()}
+                onClick={() => {
+                  setIsActiveModal(false);
+                }}
                 type="button"
                 className="cancelButton"
               >
                 Vazgeç
               </button>
-              <button type="submit" className="saveButton">
+              <button
+                type="submit"
+                className="saveButton"
+                onClick={handleSubmit}
+              >
                 Kaydet
               </button>
             </div>

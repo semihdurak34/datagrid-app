@@ -5,6 +5,7 @@ import ListDatas from "../components/ListDatas";
 import Pagination from "../components/Pagination";
 import SelectLimit from "../components/selectLimit";
 import { Link } from "react-router-dom";
+import AddData from "./AddData";
 
 const HomePage = () => {
   const [page, setPage] = useState(1);
@@ -14,6 +15,8 @@ const HomePage = () => {
   const [filteredDatas, setFilteredDatas] = useState(datasState.datas);
   const [sorted, setSorted] = useState({ sorted: "link", reversed: false });
   console.log(datasState.datas);
+
+  const [isActiveModal, setIsActiveModal] = useState(false);
 
   const sortByLink = () => {
     setSorted({ sorted: "link", reversed: !sorted.reversed });
@@ -94,8 +97,10 @@ const HomePage = () => {
     }
   }
 
+  console.log("setIsActiveModal", isActiveModal);
+
   return (
-    <div className="-fluid">
+    <div className={`homepage`}>
       <Header />
       <div className="window1">
         <div className="search-add">
@@ -109,34 +114,45 @@ const HomePage = () => {
             />
           </div>
           <div>
-            <Link to={"/add-data"} className="addbutton">
+            <button
+              className="addbutton"
+              onClick={() => setIsActiveModal(true)}
+            >
               <span className="plus-sign">+</span> Yeni Hesap Ekle
-            </Link>
+            </button>
           </div>
         </div>
-        <div className="list-data">
-          <ListDatas
-            datas={getDatas(page, limit)}
-            filteredDatas={filteredDatas}
-            setFilteredDatas={setFilteredDatas}
-            searchText={searchText}
-            setSearchText={setSearchText}
-            sortByLink={sortByLink}
-            sortByCategory={sortByCategory}
-            sorted={sorted}
-          />
-        </div>
-        <div className="pegination pagination-container pegilimit">
-          <SelectLimit onLimitChange={setLimit} />
-          <Pagination
-            totalPage={totalPage}
-            page={pageNo}
-            limit={limit}
-            siblings={1}
-            onPageChange={handlePageChange}
-          />
+        <div className="table-body">
+          <div className="list-data">
+            <ListDatas
+              datas={getDatas(page, limit)}
+              filteredDatas={filteredDatas}
+              setFilteredDatas={setFilteredDatas}
+              searchText={searchText}
+              setSearchText={setSearchText}
+              sortByLink={sortByLink}
+              sortByCategory={sortByCategory}
+              sorted={sorted}
+            />
+          </div>
+          <div className="pegination pagination-container pegilimit">
+            <SelectLimit onLimitChange={setLimit} />
+            <Pagination
+              totalPage={totalPage}
+              page={pageNo}
+              limit={limit}
+              siblings={1}
+              onPageChange={handlePageChange}
+            />
+          </div>
         </div>
       </div>
+      {isActiveModal && (
+        <AddData
+          isActiveModal={isActiveModal}
+          setIsActiveModal={setIsActiveModal}
+        />
+      )}
     </div>
   );
 };

@@ -5,12 +5,12 @@
     outline:0;
     list-style: none;
     text-decoration: none;
-    box-sizing: border-box;
+    
     
 }
 .header-nav{
     display:flex ;
-    justify-content:space-around;
+    justify-content:space-between;
     align-items: center;
     height: 60px;
     line-height:75px ;
@@ -26,7 +26,6 @@
 }
 .nav-item{
     cursor: pointer;
-    height: 100%;
     padding: 0 30px;
     transition: .4s;
 }
@@ -45,29 +44,35 @@
 
 }
 .navbar-toggler{
-    display:none
+    display:none;
+    
 }
-.window1{
-    margin:10px 30px
-}
+
 
 @media (max-width: 1015px){
     .header-nav{
         padding: 0 2rem;
+       
+        
         
     }
     .header-nav .nav-list{
-        display:grid;
         position:absolute;
         background: rgb(211, 228, 228);
         width: 100%;
+        height: 100%;
         top:60px;
         left:0px;
-        z-index: 0;
+        z-index: 10;
         transition: .6s ;
+        display: flex;
+        flex-direction: column;
+       
     }
     .header-nav .nav-list .nav-item{
-        padding-left: 40px;
+        padding-left: 10px;
+        
+       
     }
    .openHamburger{
     display: none;
@@ -78,10 +83,16 @@
     align-items: center;
 
    }
-  .nav-link{
+  .nav-social{
     display: none;
    }
-   
+   .nav-item .nav-link{
+    
+
+    
+   }
+ 
+ 
 }
 
 
@@ -201,6 +212,13 @@
     font-size:20px;
     
 }
+
+.table-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
 .search-add{
     display: flex;
     justify-content: space-between;
@@ -213,10 +231,11 @@
 }
 .window1{
     height: 830px;
-    padding: 50px;
+    padding: 40px;
     background-color: #EFF2FF;
     border-radius: 6px;
     padding-top: 40px;
+    margin: 20px 30px;
        
 }
 
@@ -247,8 +266,10 @@ tbody tr:nth-child(even){
 
 @media  (max-width: 484px) {
    .search-add{
-    display: block;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
     
    }
@@ -261,5 +282,55 @@ tbody tr:nth-child(even){
     margin: auto;
     margin-bottom: 8px;
    }
+   .real-window{
+    border-collapse: collapse;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+    width: 350px;
+    height: 400px;
+    
+    position: relative;
+    border-radius: 13px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    margin-top:60px
+    
+
+    
+
+}
    
+    }
+
+    
+
+
+
+    .homepage{
+        position: relative;
+    }
+
+   
+
+    .add-data{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0%;
+        z-index: 11;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.493);
+   }
+    .real-window{
+        background-color: white;
+        position: absolute;
+        top: 10%;
+    }
+
+
+    .btn-close:hover{
+        background-color: red;
+        transition: ease .5s;
     }
