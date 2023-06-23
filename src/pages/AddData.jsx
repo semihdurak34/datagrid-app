@@ -49,10 +49,10 @@ const AddData = () => {
   /* api ye request yollama ve stora a dispatch olma */
 
   return (
-    <div className="container">
+    <div className="container-lm">
       <Header />
       <div className="real-window">
-        <div className="add-window">
+        <div>
           <div className="d-flex justify-content-end ">
             <button
               onClick={() => cancelHandle()}
@@ -61,7 +61,7 @@ const AddData = () => {
               aria-label="Close"
             ></button>
           </div>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="add-form">
             <div className="mb-3">
               <label
                 htmlFor="link"
@@ -73,7 +73,7 @@ const AddData = () => {
                 type="text"
                 className="form-control rounded-pill"
                 id="link"
-                placeholder="twitter.com/semihInstagram4/"
+                placeholder=""
                 value={form.link}
                 onChange={(event) =>
                   setForm({ ...form, link: event.target.value })
@@ -111,7 +111,7 @@ const AddData = () => {
                 type="text"
                 className="form-control rounded-pill"
                 id="comment"
-                placeholder="Everything will be fine"
+                placeholder=""
                 value={form.comment}
                 onChange={(event) =>
                   setForm({ ...form, comment: event.target.value })

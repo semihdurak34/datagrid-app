@@ -9,7 +9,7 @@ const Pagination = (props) => {
     props.siblings
   );
   return (
-    <ul className="pagination pagination-md justify-content-end">
+    <ul className="pagination pagination-sm pegi ">
       <li className="page-item">
         <span
           onClick={() => props.onPageChange("&laquo")}
