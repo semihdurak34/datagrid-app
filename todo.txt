@@ -24,3 +24,6 @@ Veri çekme işini app.js de yapmamız gerek. (componentDidMount ile (useEffect 
 componentinin içinde yapıldı.
 -Yeni Hesap Ekle butonuna basılınca ekrana gelen pencerede sosyal medya adı apiden gelen sosyal medya adlarını otomatik çağırarak 
 kayıt işlemini kolaylaştırıyor ve hata oranını azaltıyor.
+
+
+Bu arada biraz geç gönderdim başka tasklar ile uğraşıyordum. 

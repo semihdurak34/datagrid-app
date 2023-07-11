@@ -7,7 +7,7 @@ import { useDispatch } from "react-redux";
 import actionTypes from "./redux/actions/actionTypes";
 import { useSelector } from "react-redux";
 import "./App.css";
-import AddData from "./pages/AddData";
+
 import Error from "./pages/Error";
 
 function App() {

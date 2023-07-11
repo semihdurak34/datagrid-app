@@ -5,7 +5,6 @@ import api from "../api/api";
 import urls from "../api/urls";
 import { useDispatch } from "react-redux";
 import actionTypes from "../redux/actions/actionTypes";
-import { useNavigate } from "react-router-dom";
 
 const AddData = ({ setIsActiveModal, isActiveModal }) => {
   const { categoriesState } = useSelector((state) => state);
@@ -16,7 +15,6 @@ const AddData = ({ setIsActiveModal, isActiveModal }) => {
     categoryId: "",
   });
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
